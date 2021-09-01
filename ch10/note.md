@@ -46,8 +46,9 @@ std::cout << "---reference---\n";
 for (auto &p : pArray)
     p.PrintP();
 std::cout << "=====end of code block=====\n";
-```
 
+```
+输出结果
 ```cmd
 =====test of pointer=====
 a = 31  b = pArray1 here
