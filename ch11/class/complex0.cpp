@@ -34,12 +34,14 @@ std::istream &operator>>(std::istream &is, Complex0 &a)
     std::cout << "Real part: ";
     if (!(is >> a.re)) {
         std::cout << "Bad enterance. ";
+        return is;
     }
     is.get();
-    return is;
+
     std::cout << "Imaginary Part: ";
     if (!(is >> a.im)) {
         std::cout << "Bad enterance. ";
+        return is;
     }
     is.get();
     return is;
