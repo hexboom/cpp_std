@@ -3,7 +3,7 @@
 
 class Plorg {
    private:
-    const static int LEN = 19;
+    const static int LEN = 20;
     char name[LEN];
     int CI;
 

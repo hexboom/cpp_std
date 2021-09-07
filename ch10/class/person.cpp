@@ -7,11 +7,11 @@
 Person::Person(const std::string &ln, const char *fn)
 {
     lname = ln;
-    if (strlen(fn) <= LIMIT)
+    if (strlen(fn) <= LIMIT - 1)
         strcpy(fname, fn);
     else {
         std::cout << "name length overflows.\n";
-        strncpy(fname, fn, LIMIT);
+        strncpy(fname, fn, LIMIT - 1);
         fname[LIMIT - 1] = '\0';
     }
 }

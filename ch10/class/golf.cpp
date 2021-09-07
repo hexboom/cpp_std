@@ -4,11 +4,11 @@
 #include <iostream>
 Golf::Golf(const char* name, int hc)
 {
-    if (strlen(name) <= Len)
+    if (strlen(name) <= Len - 1)
         strcpy(fullname, name);
     else {
         std::cout << "name length overflows.\n";
-        strncpy(fullname, name, Len);
+        strncpy(fullname, name, Len - 1);
         fullname[Len - 1] = '\0';
     }
     handicap = hc;
