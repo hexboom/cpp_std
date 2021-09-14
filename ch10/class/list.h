@@ -27,17 +27,18 @@ class List {
     bool Delete(int pos = 1);
     void Reverse();
     void visit(void (*pf)(T &num));
-    ~List()
-    {
-        Node *flag, *flag2;
-        flag = head;
-        while (flag != nullptr) {
-            flag2 = flag;
-            flag = flag->next;
-            delete flag2;
-        }
-    }
+    ~List();
 };
+template <class T>
+List<T>::~List()
+{
+    Node *flag;
+    while (head != nullptr) {
+        flag = head;
+        head = head->next;
+        delete flag;
+    }
+}
 
 template <class T>
 void List<T>::Print()
