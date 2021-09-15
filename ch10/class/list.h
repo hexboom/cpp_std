@@ -15,6 +15,8 @@ class List {
     };
     Node *head;
     // int size;
+    List(const List &ls) head(nullptr){};
+    List &operator=(const List &ls) { return *this; };
 
    public:
     List()
